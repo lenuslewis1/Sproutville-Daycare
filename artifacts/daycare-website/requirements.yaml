@@ -1,0 +1,10 @@
+packages:
+  "react-hook-form": "For robust client-side form validation"
+  "@hookform/resolvers": "Zod resolver for react-hook-form validation"
+
+images: []
+
+notes:
+  - No backend is required for this frontend-only marketing website.
+  - All form submissions are handled via local React state to display success messages.
+  - No external images are used; all illustrations and gallery items are built with pure CSS and SVG to ensure visual consistency and zero broken links.

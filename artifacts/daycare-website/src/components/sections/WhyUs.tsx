@@ -1,0 +1,78 @@
+import { FadeIn } from '@/components/ui/FadeIn';
+import { Apple, Users, Camera, TreePine, BookOpen, Utensils } from 'lucide-react';
+
+export function WhyUs() {
+  const features = [
+    {
+      icon: <Users className="text-accent" size={28} />,
+      title: "Low Child-to-Staff Ratio",
+      description: "Ensuring your child receives the personalized attention and care they deserve every single day."
+    },
+    {
+      icon: <Camera className="text-secondary" size={28} />,
+      title: "CCTV & Secure Entry",
+      description: "State-of-the-art security systems and strict pickup protocols for ultimate peace of mind."
+    },
+    {
+      icon: <Utensils className="text-blue-500" size={28} />,
+      title: "Nutritious Meals",
+      description: "Fresh, healthy, and allergy-conscious meals and snacks prepared by our in-house chef."
+    },
+    {
+      icon: <TreePine className="text-green-500" size={28} />,
+      title: "Outdoor Play Areas",
+      description: "Expansive, nature-inspired playgrounds designed for safe exploration and physical development."
+    },
+    {
+      icon: <BookOpen className="text-purple-500" size={28} />,
+      title: "Play-Based Learning",
+      description: "An evidence-based curriculum that makes learning fun, engaging, and highly effective."
+    },
+    {
+      icon: <Apple className="text-red-500" size={28} />,
+      title: "Licensed & Accredited",
+      description: "Fully licensed by the state and exceeding all national standards for early childhood education."
+    }
+  ];
+
+  return (
+    <section id="why-us" className="py-24 md:py-32 bg-primary text-primary-foreground relative overflow-hidden">
+      
+      {/* Decorative Background */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-white rounded-full blur-[100px]" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-secondary rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <FadeIn>
+            <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Why Choose Us</h2>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-white">The Bright Horizons Difference</h3>
+            <p className="text-lg text-primary-foreground/70 leading-relaxed">
+              We go above and beyond standard childcare. Every aspect of our center is intentionally designed to provide the absolute best for your family.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          {features.map((feature, index) => (
+            <FadeIn key={index} delay={index * 100} direction="up">
+              <div className="flex gap-5">
+                <div className="shrink-0 w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-2">{feature.title}</h4>
+                  <p className="text-primary-foreground/70 leading-relaxed">{feature.description}</p>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+}

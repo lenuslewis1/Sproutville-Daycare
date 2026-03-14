@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-border: hsl(var(--border));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  /* Soft Slate Off-White */
+  --background: 210 20% 98%;
+  /* Deep Navy Text */
+  --foreground: 211 56% 15%;
+  
+  /* Deep Navy */
+  --primary: 211 56% 23%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Soft Teal */
+  --secondary: 175 84% 32%;
+  --secondary-foreground: 0 0% 100%;
+  
+  /* Warm Coral */
+  --accent: 16 100% 66%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Muted Slate */
+  --muted: 211 20% 92%;
+  --muted-foreground: 211 20% 45%;
+  
+  --border: 211 20% 90%;
+  --card: 0 0% 100%;
+  --card-foreground: 211 56% 15%;
+  
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: 211 56% 10%;
+  --foreground: 210 20% 98%;
+  --primary: 211 56% 80%;
+  --primary-foreground: 211 56% 15%;
+  --secondary: 175 84% 40%;
+  --secondary-foreground: 211 56% 10%;
+  --accent: 16 100% 66%;
+  --accent-foreground: 0 0% 100%;
+  --muted: 211 30% 15%;
+  --muted-foreground: 211 20% 70%;
+  --border: 211 30% 20%;
+  --card: 211 56% 12%;
+  --card-foreground: 210 20% 98%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-accent/20 selection:text-accent;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-primary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

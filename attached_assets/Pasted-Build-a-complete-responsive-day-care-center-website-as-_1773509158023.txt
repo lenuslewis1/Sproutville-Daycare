@@ -1,0 +1,28 @@
+Build a complete, responsive day care center website as a single HTML file with embedded CSS and JavaScript.
+Design Style: Clean and modern. Use a minimal, professional aesthetic with a calm color palette (white, soft navy or teal as primary, warm coral or amber as accent). Use generous whitespace, subtle shadows, smooth transitions, and a geometric/grid-based layout. Typography should be crisp and readable — use Google Fonts (Inter or DM Sans).
+Primary Goals: The site must (1) drive enrollment inquiries via a clear CTA, (2) showcase the facility beautifully, and (3) give parents all the information they need to feel confident.
+Sections to include:
+
+Sticky Navbar — Clean logo (text-based), smooth-scroll nav links, and a prominent "Schedule a Tour" CTA button with hover animation
+Hero Section — Full-width, bold headline ("Where Little Minds Grow"), concise subtext, dual CTAs ("Enroll Now" + "Learn More"), and a modern split-layout or gradient background with a placeholder child illustration/image
+About Us — Mission statement, 3 core values displayed as icon + stat cards (e.g., "15+ Years Experience", "50+ Certified Staff", "200+ Happy Families"), and a short paragraph on the day care's philosophy
+Programs & Age Groups — Horizontal scrollable or grid cards for: Infant (0–12 mo), Toddler (1–3 yrs), Preschool (3–5 yrs), After School (5–12 yrs) — each with an icon, brief curriculum description, daily schedule snippet, and a "Learn More" link
+Why Choose Us — A 2-column feature section with icon + text rows: Licensed & Accredited, Nutritious Meals, Low Child-to-Staff Ratio, CCTV & Secure Entry, Outdoor Play Areas, Learning-through-Play Curriculum
+Gallery — Masonry or CSS grid photo gallery with 9–12 placeholder images, subtle hover overlay effect, and a lightbox-style click-to-expand interaction (pure JS)
+Testimonials — Auto-sliding carousel with parent quote cards, star ratings, parent name, and child's age group. Include dot navigation and pause-on-hover
+Pricing — 3-tier pricing table (Part-Time, Full-Time, Premium Care) with feature comparison rows, highlighted "Most Popular" badge on the middle plan, and an "Enroll" CTA per plan
+FAQ — Accordion-style section with 6–8 common parent questions (hours, meals, potty training policy, sick child policy, curriculum, safety, etc.)
+Contact & Enrollment Form — Split layout: left side has address, phone, email, hours of operation, and an embedded Google Maps placeholder; right side has a clean form with fields for Parent Name, Child's Name, Child's Age, Email, Phone, Preferred Start Date, Program Interest (dropdown), and Message — with client-side validation and a success message on submit
+Footer — 3-column layout: logo + tagline, quick links, contact info + social media icons. Clean divider and copyright line.
+
+Technical Requirements:
+
+Fully responsive, mobile-first design
+Scroll-triggered fade-in animations using Intersection Observer API
+Smooth scrolling between sections
+Sticky navbar that changes background on scroll (transparent → white with shadow)
+Accessible: ARIA labels, semantic HTML5, keyboard navigable
+No external CSS frameworks — pure HTML, CSS (CSS variables for theming), and vanilla JS only
+Use SVG icons inline or Unicode symbols — no icon library dependencies
+
+Tone & Feel: Professional yet warm. Parents should feel they are choosing a premium, trustworthy institution — not just a babysitter. Think "Apple-level polish meets kindergarten warmth."
