@@ -1,3 +1,4 @@
+import { Link } from 'wouter';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { Check } from 'lucide-react';
 
@@ -104,16 +105,16 @@ export function Pricing() {
                   ))}
                 </ul>
                 
-                <a
-                  href="#contact"
-                  className={`w-full py-4 rounded-2xl text-center font-bold text-lg transition-all duration-300 ${
+                <Link
+                  href="/contact"
+                  className={`block w-full py-4 rounded-2xl text-center font-bold text-lg transition-all duration-300 ${
                     plan.highlighted
                       ? 'bg-accent text-accent-foreground hover:bg-accent/90 shadow-lg shadow-accent/25'
                       : 'bg-primary/5 text-primary hover:bg-primary hover:text-white'
                   }`}
                 >
                   Enroll Now
-                </a>
+                </Link>
               </div>
             </FadeIn>
           ))}

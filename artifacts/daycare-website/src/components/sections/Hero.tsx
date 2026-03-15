@@ -1,3 +1,4 @@
+import { Link } from 'wouter';
 import { FadeIn } from '@/components/ui/FadeIn';
 
 export function Hero() {
@@ -50,18 +51,18 @@ export function Hero() {
             
             <FadeIn delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="px-8 py-4 bg-accent text-accent-foreground text-center font-bold text-lg rounded-2xl shadow-xl shadow-accent/25 hover:shadow-2xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-300"
                 >
                   Enroll Now
-                </a>
-                <a
-                  href="#programs"
+                </Link>
+                <Link
+                  href="/programs"
                   className="px-8 py-4 bg-white text-primary text-center font-bold text-lg rounded-2xl shadow-lg shadow-black/5 border border-border/50 hover:bg-secondary/5 hover:border-secondary/30 transition-all duration-300"
                 >
                   Explore Programs
-                </a>
+                </Link>
               </div>
             </FadeIn>
           </div>

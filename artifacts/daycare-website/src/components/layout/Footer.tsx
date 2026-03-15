@@ -1,3 +1,4 @@
+import { Link } from 'wouter';
 import { Sun, Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
 
 export function Footer() {
@@ -30,11 +31,18 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
-              {['About Us', 'Our Programs', 'Gallery', 'Testimonials', 'Pricing', 'FAQ'].map(link => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-primary-foreground/70 hover:text-white transition-colors">
-                    {link}
-                  </a>
+              {[
+                { label: 'About Us', href: '/' },
+                { label: 'Our Programs', href: '/programs' },
+                { label: 'Gallery', href: '/gallery' },
+                { label: 'Testimonials', href: '/testimonials' },
+                { label: 'Pricing', href: '/pricing' },
+                { label: 'Contact', href: '/contact' },
+              ].map(link => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-primary-foreground/70 hover:text-white transition-colors">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
