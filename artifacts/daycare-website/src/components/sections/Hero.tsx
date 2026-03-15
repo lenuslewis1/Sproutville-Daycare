@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { FadeIn } from '@/components/ui/FadeIn';
+import heroImage from '@/assets/hero-children.png';
 
 export function Hero() {
   return (
@@ -67,26 +68,42 @@ export function Hero() {
             </FadeIn>
           </div>
 
-          {/* Abstract Hero Visual (Instead of Image) */}
+          {/* Hero Image in Animated Blob */}
           <FadeIn delay={400} direction="left" className="hidden lg:flex justify-center items-center relative">
-            <div className="w-[500px] h-[500px] relative">
-              {/* Central Blob */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-primary rounded-[40%_60%_70%_30%/40%_50%_60%_50%] animate-[blob_8s_ease-in-out_infinite] shadow-2xl opacity-90 backdrop-blur-3xl" />
-              {/* Secondary Blob overlay */}
-              <div className="absolute inset-4 bg-gradient-to-tr from-accent to-orange-300 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] animate-[blob_10s_ease-in-out_infinite_reverse] mix-blend-multiply opacity-80" />
-              
+            <div className="w-[480px] h-[520px] relative">
+              {/* Blob border glow */}
+              <div
+                className="absolute inset-0 animate-[blob_8s_ease-in-out_infinite] shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, #0d9488, #1a3a5c)',
+                  borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%',
+                  padding: '6px',
+                }}
+              >
+                <div
+                  className="w-full h-full overflow-hidden animate-[blob_8s_ease-in-out_infinite]"
+                  style={{ borderRadius: 'inherit' }}
+                >
+                  <img
+                    src={heroImage}
+                    alt="Happy children learning and playing at Bright Horizons Day Care"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
               {/* Floating Element 1 */}
-              <div className="absolute top-10 right-10 bg-white p-4 rounded-2xl shadow-xl animate-bounce" style={{ animationDuration: '3s' }}>
-                <span className="text-4xl">🎨</span>
+              <div className="absolute top-6 -right-6 bg-white p-3 rounded-2xl shadow-xl animate-bounce z-10" style={{ animationDuration: '3s' }}>
+                <span className="text-3xl">🎨</span>
               </div>
-              
+
               {/* Floating Element 2 */}
-              <div className="absolute bottom-20 left-4 bg-white p-4 rounded-2xl shadow-xl animate-bounce" style={{ animationDuration: '4s', animationDelay: '1s' }}>
-                <span className="text-4xl">🧩</span>
+              <div className="absolute bottom-16 -left-6 bg-white p-3 rounded-2xl shadow-xl animate-bounce z-10" style={{ animationDuration: '4s', animationDelay: '1s' }}>
+                <span className="text-3xl">🧩</span>
               </div>
-              
-              {/* Floating Element 3 */}
-              <div className="absolute top-1/2 -right-8 bg-white px-6 py-3 rounded-2xl shadow-xl border border-border/50 flex items-center gap-3">
+
+              {/* Floating badge */}
+              <div className="absolute bottom-4 -right-8 bg-white px-5 py-3 rounded-2xl shadow-xl border border-border/50 flex items-center gap-3 z-10">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full bg-secondary border-2 border-white" />
                   <div className="w-8 h-8 rounded-full bg-accent border-2 border-white" />
@@ -95,7 +112,7 @@ export function Hero() {
                 <span className="font-bold text-sm text-primary">200+ Families</span>
               </div>
             </div>
-            
+
             <style>{`
               @keyframes blob {
                 0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
