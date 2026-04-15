@@ -8,7 +8,7 @@ export function Testimonials() {
       id: 1,
       name: "Sarah Jenkins",
       role: "Parent of 3-year-old",
-      quote: "Leaving my daughter for the first time was terrifying, but the teachers at Bright Horizons made the transition so smooth. She comes home every day excited to tell me what she learned."
+      quote: "Leaving my daughter for the first time was terrifying, but the teachers at Sproutville Daycare made the transition so smooth. She comes home every day excited to tell me what she learned."
     },
     {
       id: 2,

@@ -49,7 +49,7 @@ export function WhyUs() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <FadeIn>
             <h2 className="text-sm font-bold tracking-widest text-accent uppercase mb-3">Why Choose Us</h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-white">The Bright Horizons Difference</h3>
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-white">The Sproutville Daycare Difference</h3>
             <p className="text-lg text-primary-foreground/70 leading-relaxed">
               We go above and beyond standard childcare. Every aspect of our center is intentionally designed to provide the absolute best for your family.
             </p>

@@ -14,7 +14,7 @@ export function Footer() {
                 <Sun size={24} strokeWidth={2.5} />
               </div>
               <span className="font-bold text-2xl tracking-tight">
-                Bright Horizons
+                Sproutville Daycare
               </span>
             </div>
             <p className="text-primary-foreground/70 leading-relaxed">
@@ -66,11 +66,11 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-primary-foreground/70">
                 <MapPin size={20} className="shrink-0 text-accent" />
-                <span>123 Sunshine Lane<br />San Francisco, CA 94110</span>
+                <span>House Number 10, 2nd Aviation Loop<br />Spintex Rd, Accra</span>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Phone size={20} className="shrink-0 text-accent" />
-                <span>(555) 123-4567</span>
+                <span>055 757 7475</span>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail size={20} className="shrink-0 text-accent" />
@@ -83,7 +83,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-primary-foreground/50">
-            &copy; {new Date().getFullYear()} Bright Horizons Day Care. All rights reserved.
+            &copy; {new Date().getFullYear()} Sproutville Daycare. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-primary-foreground/50">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

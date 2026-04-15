@@ -52,7 +52,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">Location</h4>
-                    <p className="text-muted-foreground">123 Sunshine Lane<br/>San Francisco, CA 94110</p>
+                    <p className="text-muted-foreground">House Number 10, 2nd Aviation Loop<br/>Spintex Rd, Accra</p>
                   </div>
                 </div>
                 
@@ -62,7 +62,7 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
+                    <p className="text-muted-foreground">055 757 7475</p>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ export function Contact() {
                     </div>
                     <h3 className="text-3xl font-bold text-primary mb-4">Request Sent!</h3>
                     <p className="text-lg text-muted-foreground max-w-sm">
-                      Thank you for your interest in Bright Horizons. We will contact you within 24 hours to confirm your tour.
+                      Thank you for your interest in Sproutville Daycare. We will contact you within 24 hours to confirm your tour.
                     </p>
                     <button 
                       onClick={() => setIsSubmitted(false)}
@@ -126,7 +126,7 @@ export function Contact() {
                         <input 
                           {...register("phone")}
                           className="w-full px-4 py-3 rounded-xl bg-white border border-border focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
-                          placeholder="(555) 000-0000"
+                          placeholder="055 757 7475"
                         />
                         {errors.phone && <span className="text-red-500 text-xs font-medium">{errors.phone.message}</span>}
                       </div>

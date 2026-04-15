@@ -54,7 +54,7 @@ export function Navbar() {
               <Sun size={24} strokeWidth={2.5} />
             </div>
             <span className="font-bold text-xl tracking-tight text-primary">
-              Bright Horizons
+              Sproutville Daycare
             </span>
           </Link>
 

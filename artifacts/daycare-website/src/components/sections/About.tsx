@@ -5,19 +5,19 @@ export function About() {
   const stats = [
     {
       icon: <ShieldCheck size={32} className="text-secondary" />,
-      value: "15+",
-      label: "Years Experience",
-      description: "Providing trusted care since 2009."
+      value: "2024",
+      label: "Established",
+      description: "Proudly serving families since 2024."
     },
     {
       icon: <Heart size={32} className="text-accent" />,
-      value: "50+",
+      value: "7+",
       label: "Certified Staff",
       description: "Passionate and highly trained educators."
     },
     {
       icon: <Smile size={32} className="text-primary" />,
-      value: "200+",
+      value: "30+",
       label: "Happy Families",
       description: "A community built on love and trust."
     }
@@ -32,7 +32,7 @@ export function About() {
             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">About Us</h2>
             <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">A Second Home for Your Child</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Bright Horizons, we believe that early childhood is a magical time of discovery. Our mission is to partner with parents to provide a safe, inclusive, and stimulating environment that fosters independence, creativity, and a lifelong love of learning.
+              At Sproutville Daycare, we believe that early childhood is a magical time of discovery. Our mission is to partner with parents to provide a safe, inclusive, and stimulating environment that fosters independence, creativity, and a lifelong love of learning.
             </p>
           </FadeIn>
         </div>

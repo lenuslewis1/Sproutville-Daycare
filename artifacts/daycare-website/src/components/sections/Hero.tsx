@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { FadeIn } from '@/components/ui/FadeIn';
-import heroImage from '@/assets/hero-children.png';
+import heroImage from '@/assets/outdoor-play-green-slide.webp';
 
 export function Hero() {
   return (
@@ -86,7 +86,7 @@ export function Hero() {
                 >
                   <img
                     src={heroImage}
-                    alt="Happy children learning and playing at Bright Horizons Day Care"
+                    alt="Happy children learning and playing at Sproutville Daycare"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -109,7 +109,7 @@ export function Hero() {
                   <div className="w-8 h-8 rounded-full bg-accent border-2 border-white" />
                   <div className="w-8 h-8 rounded-full bg-primary border-2 border-white" />
                 </div>
-                <span className="font-bold text-sm text-primary">200+ Families</span>
+                <span className="font-bold text-sm text-primary">30+ Families</span>
               </div>
             </div>
 

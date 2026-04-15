@@ -11,7 +11,7 @@ export default function GalleryPage() {
           <p className="text-accent font-semibold uppercase tracking-widest text-sm mb-3">A Peek Inside</p>
           <h1 className="text-4xl md:text-5xl font-bold text-primary">Our Gallery</h1>
           <p className="mt-4 text-foreground/70 max-w-xl mx-auto text-lg">
-            Moments of joy, creativity, and discovery — every day at Bright Horizons.
+            Moments of joy, creativity, and discovery — every day at Sproutville Daycare.
           </p>
         </div>
         <Gallery />

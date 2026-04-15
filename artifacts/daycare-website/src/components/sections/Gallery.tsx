@@ -1,15 +1,15 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { FadeIn } from '@/components/ui/FadeIn';
 import { X, ZoomIn } from 'lucide-react';
 
-import imgArtsCrafts from '@/assets/gallery-arts-crafts.png';
-import imgStoryTime from '@/assets/gallery-story-time.png';
-import imgOutdoorPlay from '@/assets/gallery-outdoor-play.png';
-import imgMusicDance from '@/assets/gallery-music-dance.png';
-import imgBuildingBlocks from '@/assets/gallery-building-blocks.png';
-import imgNapTime from '@/assets/gallery-nap-time.png';
-import imgSensoryPlay from '@/assets/gallery-sensory-play.png';
-import imgLunchTime from '@/assets/gallery-lunch-time.png';
+import imgReadingCircle from '@/assets/classroom-reading-1.webp';
+import imgTableActivity from '@/assets/classroom-table-activity.webp';
+import imgStorytimeMoment from '@/assets/caregiver-storytime-red.webp';
+import imgPlayLift from '@/assets/caregiver-play-wall.webp';
+import imgSmilingToddlers from '@/assets/toddlers-smiling.webp';
+import imgBookTime from '@/assets/book-time-floor.webp';
+import imgOutdoorPlay from '@/assets/outdoor-play-green-slide.webp';
+import imgQuietReading from '@/assets/two-kids-reading-mats.webp';
 
 interface GalleryItem {
   id: number;
@@ -22,20 +22,19 @@ export function Gallery() {
   const [selected, setSelected] = useState<GalleryItem | null>(null);
 
   const galleryItems: GalleryItem[] = [
-    { id: 1, title: 'Arts & Crafts',    icon: '🎨', src: imgArtsCrafts },
-    { id: 2, title: 'Story Time',        icon: '📚', src: imgStoryTime },
-    { id: 3, title: 'Outdoor Play',      icon: '☀️', src: imgOutdoorPlay },
-    { id: 4, title: 'Music & Dance',     icon: '🎵', src: imgMusicDance },
-    { id: 5, title: 'Building Blocks',   icon: '🧱', src: imgBuildingBlocks },
-    { id: 6, title: 'Nap Time',          icon: '💤', src: imgNapTime },
-    { id: 7, title: 'Sensory Play',      icon: '👐', src: imgSensoryPlay },
-    { id: 8, title: 'Lunch Time',        icon: '🍎', src: imgLunchTime },
+    { id: 1, title: 'Group Reading Time', icon: 'BOOK', src: imgReadingCircle },
+    { id: 2, title: 'Table Learning', icon: 'WRITE', src: imgTableActivity },
+    { id: 3, title: 'Story Time', icon: 'READ', src: imgStorytimeMoment },
+    { id: 4, title: 'Active Play', icon: 'PLAY', src: imgPlayLift },
+    { id: 5, title: 'Happy Moments', icon: 'SMILE', src: imgSmilingToddlers },
+    { id: 6, title: 'Book Time', icon: 'BOOK', src: imgBookTime },
+    { id: 7, title: 'Outdoor Fun', icon: 'OUTDOOR', src: imgOutdoorPlay },
+    { id: 8, title: 'Quiet Reading', icon: 'QUIET', src: imgQuietReading },
   ];
 
   return (
     <section id="gallery" className="py-24 md:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <FadeIn>
@@ -50,7 +49,6 @@ export function Gallery() {
           </FadeIn>
         </div>
 
-        {/* Photo Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           {galleryItems.map((item, index) => (
             <FadeIn
@@ -70,7 +68,6 @@ export function Gallery() {
                   style={{ minHeight: '200px' }}
                 />
 
-                {/* Hover overlay */}
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/50 transition-colors duration-300 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100">
                   <ZoomIn size={32} className="text-white mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-300" />
                   <span className="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75 drop-shadow-md">
@@ -83,7 +80,6 @@ export function Gallery() {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
       {selected && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-md p-4 animate-in fade-in duration-300"
@@ -93,13 +89,8 @@ export function Gallery() {
             className="relative w-full max-w-4xl rounded-[2rem] overflow-hidden shadow-2xl animate-in zoom-in-95 duration-300"
             onClick={e => e.stopPropagation()}
           >
-            <img
-              src={selected.src}
-              alt={selected.title}
-              className="w-full h-auto max-h-[80vh] object-cover"
-            />
+            <img src={selected.src} alt={selected.title} className="w-full h-auto max-h-[80vh] object-cover" />
 
-            {/* Caption bar */}
             <div className="absolute bottom-0 left-0 right-0 px-8 py-5 bg-gradient-to-t from-black/70 to-transparent">
               <p className="text-white font-bold text-2xl drop-shadow">
                 {selected.icon} {selected.title}
