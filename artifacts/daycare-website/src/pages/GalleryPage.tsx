@@ -1,8 +1,15 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Gallery } from '@/components/sections/Gallery';
+import { usePageMeta } from '@/hooks/use-page-meta';
 
 export default function GalleryPage() {
+  usePageMeta({
+    title: 'Our Gallery',
+    description: 'Take a peek inside Sproutville Daycare — moments of joy, creativity, and discovery captured every day through arts & crafts, outdoor play, story time, and more.',
+    path: '/gallery',
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

@@ -2,8 +2,15 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Programs } from '@/components/sections/Programs';
 import { WhyUs } from '@/components/sections/WhyUs';
+import { usePageMeta } from '@/hooks/use-page-meta';
 
 export default function ProgramsPage() {
+  usePageMeta({
+    title: 'Our Programs',
+    description: 'Explore Sproutville Daycare\'s thoughtfully designed programs for every stage of your child\'s development — from infants to preschoolers ages 3 months to 5 years.',
+    path: '/programs',
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

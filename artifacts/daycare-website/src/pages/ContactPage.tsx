@@ -1,8 +1,15 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Contact } from '@/components/sections/Contact';
+import { usePageMeta } from '@/hooks/use-page-meta';
 
 export default function ContactPage() {
+  usePageMeta({
+    title: 'Get in Touch',
+    description: 'Schedule a tour, ask questions, or start your enrollment journey at Sproutville Daycare today. We\'d love to meet you and your little one!',
+    path: '/contact',
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

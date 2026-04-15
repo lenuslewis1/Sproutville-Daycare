@@ -2,8 +2,15 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Pricing } from '@/components/sections/Pricing';
 import { FAQ } from '@/components/sections/FAQ';
+import { usePageMeta } from '@/hooks/use-page-meta';
 
 export default function PricingPage() {
+  usePageMeta({
+    title: 'Pricing Plans',
+    description: 'Sproutville Daycare offers flexible, transparent pricing plans with no hidden fees — designed to fit your family\'s needs and budget. View our rates and FAQ.',
+    path: '/pricing',
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

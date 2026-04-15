@@ -1,8 +1,15 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Testimonials } from '@/components/sections/Testimonials';
+import { usePageMeta } from '@/hooks/use-page-meta';
 
 export default function TestimonialsPage() {
+  usePageMeta({
+    title: 'What Families Say',
+    description: 'Read real stories from the families who trust Sproutville Daycare with what matters most. See why 30+ families choose us for quality childcare and early education.',
+    path: '/testimonials',
+  });
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
