@@ -72,15 +72,23 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">Hours</h4>
-                    <p className="text-muted-foreground">Mon - Fri: 6:30 AM - 6:30 PM<br/>Sat - Sun: Closed</p>
+                    <p className="text-muted-foreground">Mon - Fri: 7:30 AM – 6:30 PM<br/>Breakfast Club: 6:30 – 7:30 AM<br/>After School: 6:00 – 7:00 PM<br/>Sat - Sun: Closed</p>
                   </div>
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="w-full h-64 bg-slate-100 rounded-3xl overflow-hidden border border-border flex flex-col items-center justify-center text-muted-foreground">
-                <MapPin size={48} className="text-slate-300 mb-2" />
-                <span className="font-medium">Interactive Map Placeholder</span>
+              {/* Google Maps Embed */}
+              <div className="w-full h-64 rounded-3xl overflow-hidden border border-border">
+                <iframe
+                  src="https://maps.google.com/maps?q=House+Number+10,+2nd+Aviation+Loop,+Spintex+Road,+Accra,+Ghana&output=embed&z=16"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Sproutville Daycare Location"
+                />
               </div>
             </FadeIn>
           </div>

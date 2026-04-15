@@ -6,7 +6,7 @@ export function FAQ() {
   const faqs = [
     {
       question: "What are your operating hours?",
-      answer: "We are open Monday through Friday, from 6:30 AM to 6:30 PM. We offer flexible drop-off and pick-up times within your scheduled plan."
+      answer: "We are open Monday through Friday, from 7:30 AM to 6:30 PM. We also offer a Breakfast Club (6:30 – 7:30 AM) and an After School Club (6:00 – 7:00 PM) for additional wrap-around care."
     },
     {
       question: "Are meals provided?",
@@ -17,8 +17,8 @@ export function FAQ() {
       answer: "To protect all children, we require kids to be fever-free without medication for 24 hours before returning. Children showing symptoms of contagious illness must be kept home."
     },
     {
-      question: "How do you handle potty training?",
-      answer: "We work closely with parents to support potty training when the child shows readiness signs, usually in the Toddler room. We use positive reinforcement and consistent routines."
+      question: "Do you offer government-funded places?",
+      answer: "Yes! We offer 15 hours of free childcare per week for eligible 2-year-olds, and 30 hours per week for working parents of 3 and 4-year-olds. Please contact us to check your eligibility and availability."
     },
     {
       question: "Is the facility secure?",

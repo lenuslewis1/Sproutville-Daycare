@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Sun, Mail, Phone, MapPin, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -10,9 +10,11 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="bg-accent text-white p-2 rounded-xl">
-                <Sun size={24} strokeWidth={2.5} />
-              </div>
+              <img
+                src="/sproutville-logo.png"
+                alt="Sproutville Daycare logo"
+                className="w-11 h-11 rounded-xl object-cover border border-white/20 bg-white"
+              />
               <span className="font-bold text-2xl tracking-tight">
                 Sproutville Daycare
               </span>
@@ -21,9 +23,10 @@ export function Footer() {
               Providing a safe, nurturing, and stimulating environment where children thrive and families feel at home.
             </p>
             <div className="flex gap-4 pt-2">
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Facebook size={18} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Instagram size={18} /></a>
-              <a href="#" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Twitter size={18} /></a>
+              <a href="https://www.facebook.com/sproutvilledaycare/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Facebook size={18} /></a>
+              <a href="https://www.instagram.com/sproutville_daycare/" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Instagram size={18} /></a>
+              <a href="https://x.com/sproutville_gh" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Twitter size={18} /></a>
+              <a href="https://share.google/zqLoscKwQmFScLBJk" target="_blank" rel="noopener noreferrer" className="p-2 bg-white/10 rounded-full hover:bg-accent transition-colors"><Globe size={18} /></a>
             </div>
           </div>
 
@@ -52,11 +55,11 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Programs</h3>
             <ul className="space-y-3">
-              <li className="text-primary-foreground/70">Infant Care (0-12 mo)</li>
-              <li className="text-primary-foreground/70">Toddler (1-3 yrs)</li>
-              <li className="text-primary-foreground/70">Preschool (3-5 yrs)</li>
-              <li className="text-primary-foreground/70">After School (5-12 yrs)</li>
-              <li className="text-primary-foreground/70">Summer Camp</li>
+              <li className="text-primary-foreground/70">Blossom Room (3 months – 2 yrs)</li>
+              <li className="text-primary-foreground/70">Sunshine Room (2 – 3 yrs)</li>
+              <li className="text-primary-foreground/70">Rainbow Room (3 – 5 yrs)</li>
+              <li className="text-primary-foreground/70">Breakfast Club (6:30 – 7:30 AM)</li>
+              <li className="text-primary-foreground/70">After School Club (6:00 – 7:00 PM)</li>
             </ul>
           </div>
 
@@ -74,7 +77,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail size={20} className="shrink-0 text-accent" />
-                <span>hello@brighthorizons.com</span>
+                <span>info@sproutvilledaycare.com</span>
               </li>
             </ul>
           </div>

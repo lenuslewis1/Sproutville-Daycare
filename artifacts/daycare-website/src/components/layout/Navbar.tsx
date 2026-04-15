@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Sun } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,9 +50,11 @@ export function Navbar() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-accent text-white p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-              <Sun size={24} strokeWidth={2.5} />
-            </div>
+            <img
+              src="/sproutville-logo.png"
+              alt="Sproutville Daycare logo"
+              className="w-11 h-11 rounded-xl object-cover border border-border/60 shadow-sm"
+            />
             <span className="font-bold text-xl tracking-tight text-primary">
               Sproutville Daycare
             </span>

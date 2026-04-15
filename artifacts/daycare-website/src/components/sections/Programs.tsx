@@ -1,43 +1,43 @@
 import { FadeIn } from '@/components/ui/FadeIn';
-import { Baby, ToyBrick, Palette, Backpack } from 'lucide-react';
+import { Baby, Sun, Palette, Clock } from 'lucide-react';
 
 export function Programs() {
   const programs = [
     {
-      title: "Infant Care",
-      age: "0 - 12 Months",
+      title: "Blossom Room",
+      age: "3 Months - 2 Years",
       icon: <Baby size={40} className="text-white" />,
       color: "bg-teal-500",
       lightColor: "bg-teal-500/10",
-      description: "A calm, nurturing environment focused on establishing routines, sensory play, and developmental milestones.",
-      schedule: "Tummy time, sensory exploration, naps, and cuddles."
+      description: "A calm, nurturing space for our youngest learners, focused on routines, sensory exploration, and key developmental milestones.",
+      schedule: "Tummy time, sensory play, communication & language activities, gentle routines."
     },
     {
-      title: "Toddler",
-      age: "1 - 3 Years",
-      icon: <ToyBrick size={40} className="text-white" />,
+      title: "Sunshine Room",
+      age: "2 - 3 Years",
+      icon: <Sun size={40} className="text-white" />,
       color: "bg-orange-500",
       lightColor: "bg-orange-500/10",
-      description: "Encouraging curiosity and independence through structured play, music, and motor skill activities.",
-      schedule: "Story time, free play, arts & crafts, outdoor activities."
+      description: "Encouraging curiosity and independence through structured play, physical development, and early literacy activities.",
+      schedule: "Story time, outdoor play, arts & crafts, music and movement."
     },
     {
-      title: "Preschool",
+      title: "Rainbow Room",
       age: "3 - 5 Years",
       icon: <Palette size={40} className="text-white" />,
       color: "bg-blue-500",
       lightColor: "bg-blue-500/10",
-      description: "Preparing for kindergarten with foundational academics, social emotional learning, and creative expression.",
-      schedule: "Circle time, literacy & math centers, science experiments."
+      description: "Preparing children for school through the EYFS framework — building literacy, numeracy, and social-emotional confidence.",
+      schedule: "Circle time, literacy & numeracy centres, creative expression, football & cricket."
     },
     {
-      title: "After School",
-      age: "5 - 12 Years",
-      icon: <Backpack size={40} className="text-white" />,
+      title: "Extended Care",
+      age: "Breakfast & After School Clubs",
+      icon: <Clock size={40} className="text-white" />,
       color: "bg-purple-500",
       lightColor: "bg-purple-500/10",
-      description: "A safe space for older children to complete homework, engage in STEM projects, and relax with friends.",
-      schedule: "Homework help, group games, technology, quiet reading."
+      description: "Flexible wrap-around care to support working families, with a warm breakfast or relaxed after-school activities.",
+      schedule: "Breakfast Club 6:30 – 7:30 AM · After School Club 6:00 – 7:00 PM"
     }
   ];
 
@@ -47,8 +47,8 @@ export function Programs() {
         
         <div className="mb-16">
           <FadeIn>
-            <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Our Curriculum</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">Programs for Every Stage</h3>
+            <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Our Rooms & Clubs</h2>
+            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">A Place for Every Stage of Childhood</h3>
           </FadeIn>
         </div>
 

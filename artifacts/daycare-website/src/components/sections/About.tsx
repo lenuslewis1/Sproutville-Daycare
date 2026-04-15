@@ -5,21 +5,21 @@ export function About() {
   const stats = [
     {
       icon: <ShieldCheck size={32} className="text-secondary" />,
-      value: "2024",
-      label: "Established",
-      description: "Proudly serving families since 2024."
+      value: "EYFS",
+      label: "Framework",
+      description: "We follow the Early Years Foundation Stage framework in everything we do."
     },
     {
       icon: <Heart size={32} className="text-accent" />,
-      value: "7+",
-      label: "Certified Staff",
-      description: "Passionate and highly trained educators."
+      value: "3",
+      label: "Dedicated Rooms",
+      description: "Blossom, Sunshine & Rainbow Rooms — each tailored to a different stage of growth."
     },
     {
       icon: <Smile size={32} className="text-primary" />,
       value: "30+",
       label: "Happy Families",
-      description: "A community built on love and trust."
+      description: "A close-knit community built on love, trust, and purposeful play."
     }
   ];
 
@@ -30,9 +30,9 @@ export function About() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">About Us</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">A Second Home for Your Child</h3>
+            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">A Warm, Inspiring Place to Grow</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Sproutville Daycare, we believe that early childhood is a magical time of discovery. Our mission is to partner with parents to provide a safe, inclusive, and stimulating environment that fosters independence, creativity, and a lifelong love of learning.
+              At Sproutville Daycare, we provide a warm, safe, and inspiring environment for young learners aged 3 months to 5 years. Our philosophy centres on nurturing confident, curious, and happy learners through love, care, and purposeful play — guided by the Early Years Foundation Stage (EYFS) framework.
             </p>
           </FadeIn>
         </div>

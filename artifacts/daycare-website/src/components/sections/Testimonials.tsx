@@ -6,27 +6,21 @@ export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Jenkins",
-      role: "Parent of 3-year-old",
-      quote: "Leaving my daughter for the first time was terrifying, but the teachers at Sproutville Daycare made the transition so smooth. She comes home every day excited to tell me what she learned."
+      name: "Debbie Franklin",
+      role: "Parent at Sproutville Daycare",
+      quote: "The facilities are fantastic. Our children have truly flourished here — the staff are warm, attentive, and genuinely passionate about each child's development. We feel so lucky to have found Sproutville."
     },
     {
       id: 2,
-      name: "David Chen",
-      role: "Parent of infant & preschooler",
-      quote: "The facility is exceptionally clean, the security protocols are top-notch, and the curriculum is genuinely engaging. It's the best investment we've made for our children's early years."
+      name: "Samira Ali",
+      role: "Parent at Sproutville Daycare",
+      quote: "It was exciting to see such a nurturing environment when we first visited. The curriculum is thoughtfully designed and the team goes above and beyond to make every child feel safe, happy, and at home."
     },
     {
       id: 3,
-      name: "Maria Rodriguez",
-      role: "Parent of 5-year-old",
-      quote: "My son's confidence and vocabulary have exploded since he started here. The staff truly cares about each child's individual development. We couldn't be happier!"
-    },
-    {
-      id: 4,
-      name: "James Thompson",
-      role: "Parent of 2-year-old",
-      quote: "From the nutritious meals to the incredible outdoor play area, everything is designed perfectly for toddlers. The daily updates through their app keep us connected all day."
+      name: "Jodie Smith",
+      role: "Parent at Sproutville Daycare",
+      quote: "Really impressed with the vision behind Sproutville. They have a clear passion for early years education that shines through in everything they do. My little one loves coming here every day."
     }
   ];
 

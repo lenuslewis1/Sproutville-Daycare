@@ -1,8 +1,24 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { FadeIn } from '@/components/ui/FadeIn';
-import heroImage from '@/assets/outdoor-play-green-slide.webp';
+import heroImage1 from '@/assets/outdoor-play-green-slide.webp';
+import heroImage2 from '@/assets/toddlers-smiling.webp';
+import heroImage3 from '@/assets/caregiver-storytime-red.webp';
+import heroImage4 from '@/assets/classroom-table-activity.webp';
+import heroImage5 from '@/assets/caregiver-play-wall.webp';
+
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
 
 export function Hero() {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % heroImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-background">
       {/* Decorative CSS Background Blobs */}
@@ -33,30 +49,30 @@ export function Hero() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
                 </span>
-                Now enrolling for Fall 2025
+                Now enrolling — Ages 3 months to 5 years
               </div>
             </FadeIn>
-            
+
             <FadeIn delay={100}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-balance leading-[1.1] mb-6 text-primary">
-                Where Little <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-400">Minds Grow</span>
+                Where Small Steps Lead to<br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-400">Big Discoveries!</span>
               </h1>
             </FadeIn>
-            
+
             <FadeIn delay={200}>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-xl text-balance">
-                Providing a safe, nurturing, and stimulating environment where your children can thrive, learn, and discover the world with joy.
+                A warm, safe, and inspiring environment where we nurture confident, curious, and happy learners through love, care, and purposeful play.
               </p>
             </FadeIn>
-            
+
             <FadeIn delay={300}>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
                   className="px-8 py-4 bg-accent text-accent-foreground text-center font-bold text-lg rounded-2xl shadow-xl shadow-accent/25 hover:shadow-2xl hover:shadow-accent/30 hover:-translate-y-1 transition-all duration-300"
                 >
-                  Enroll Now
+                  Book a Visit
                 </Link>
                 <Link
                   href="/programs"
@@ -81,14 +97,18 @@ export function Hero() {
                 }}
               >
                 <div
-                  className="w-full h-full overflow-hidden animate-[blob_8s_ease-in-out_infinite]"
+                  className="w-full h-full overflow-hidden animate-[blob_8s_ease-in-out_infinite] relative"
                   style={{ borderRadius: 'inherit' }}
                 >
-                  <img
-                    src={heroImage}
-                    alt="Happy children learning and playing at Sproutville Daycare"
-                    className="w-full h-full object-cover"
-                  />
+                  {heroImages.map((src, index) => (
+                    <img
+                      key={index}
+                      src={src}
+                      alt="Happy children learning and playing at Sproutville Daycare"
+                      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+                      style={{ opacity: index === currentImage ? 1 : 0 }}
+                    />
+                  ))}
                 </div>
               </div>
 
