@@ -5,46 +5,41 @@ import { Check } from 'lucide-react';
 export function Pricing() {
   const plans = [
     {
-      name: "Part-Time",
-      price: "$800",
-      period: "per month",
-      description: "Perfect for flexible schedules.",
+      name: "Termly Offer",
+      price: "Ghc 2,500",
+      period: "per term",
+      description: "Structured term fees by age range.",
       features: [
-        "3 Days a Week",
-        "8:00 AM - 1:00 PM",
-        "Nutritious Lunch Included",
-        "Basic Arts & Crafts",
-        "Daily Progress Updates"
+        "Infants - Not Applicable (N/A)",
+        "Toddlers (1-3 years): Ghc 2,500",
+        "Preschool (3-5 years): Ghc 2,400",
+        "Enrollment fee: Ghc 600.00"
       ],
       highlighted: false
     },
     {
-      name: "Full-Time",
-      price: "$1,200",
+      name: "Monthly Offer",
+      price: "Ghc 1,300",
       period: "per month",
-      description: "Our most popular comprehensive care.",
+      description: "Monthly tuition by age range.",
       features: [
-        "5 Days a Week",
-        "7:30 AM - 5:30 PM",
-        "All Meals & Snacks Included",
-        "Full Curriculum Access",
-        "Daily Progress Updates",
-        "1 Free Date-Night Care/mo"
+        "Infants (3-12 months): Ghc 1,300",
+        "Toddlers (1-3 years): Ghc 1,100",
+        "Preschool (3-5 years): Ghc 1,000",
+        "Secure and nurturing care included"
       ],
       highlighted: true
     },
     {
-      name: "Premium Care",
-      price: "$1,600",
-      period: "per month",
-      description: "Extended hours & premium perks.",
+      name: "Daily & Weekly Offer",
+      price: "From Ghc 110",
+      period: "per day",
+      description: "Flexible daily and weekly options.",
       features: [
-        "5 Days a Week",
-        "6:30 AM - 6:30 PM",
-        "All Meals & Snacks Included",
-        "Full Curriculum Access",
-        "Live CCTV Stream Access",
-        "Weekly Extracurriculars (Dance/Music)",
+        "Infants: 1 day 130, 2 days 225, 3 days 310, 4 days 370, weekly 450",
+        "Toddlers/Preschool: 1 day 110, 2 days 190, 3 days 260, 4 days 320, weekly 400",
+        "After school program: Ghc 200 per week",
+        "Late pickup after 4:00 PM: Ghc 20 per hour"
       ],
       highlighted: false
     }
@@ -57,9 +52,9 @@ export function Pricing() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-3">Tuition</h2>
-            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">Simple, Transparent Pricing</h3>
+            <h3 className="text-3xl md:text-5xl font-bold text-primary mb-6">Simple, Transparent Fees</h3>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              No hidden fees. All enrollment plans include learning materials and essential care items. Sibling discounts available.
+              Flexible payment options are available. We accept bank transfer, mobile money, and cash.
             </p>
           </FadeIn>
         </div>

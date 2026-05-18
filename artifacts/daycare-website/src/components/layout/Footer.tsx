@@ -73,11 +73,15 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Phone size={20} className="shrink-0 text-accent" />
-                <span>055 757 7475</span>
+                <span>Daycare: 0302812077 | Mobile: 0557577475</span>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail size={20} className="shrink-0 text-accent" />
-                <span>info@sproutvilledaycare.com</span>
+                <span>sproutvilledaycare@gmail.com</span>
+              </li>
+              <li className="flex items-center gap-3 text-primary-foreground/70">
+                <Globe size={20} className="shrink-0 text-accent" />
+                <span>Digital Address: GZ-190-9708</span>
               </li>
             </ul>
           </div>

@@ -62,7 +62,17 @@ export function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">055 757 7475</p>
+                    <p className="text-muted-foreground">Daycare Line: 0302812077<br/>Mobile Line: 0557577475</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-secondary/10 rounded-xl flex items-center justify-center shrink-0">
+                    <Mail className="text-secondary" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">Email & Digital Address</h4>
+                    <p className="text-muted-foreground">sproutvilledaycare@gmail.com<br/>GZ-190-9708</p>
                   </div>
                 </div>
 

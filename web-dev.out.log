@@ -2,30 +2,18 @@
 > @workspace/daycare-website@0.0.0 dev C:\Users\tee_b\Desktop\WORK\Code\sproutville\Sproutville-Daycare\artifacts\daycare-website
 > vite --config vite.config.ts --host 0.0.0.0
 
-Port 5173 is in use, trying another one...
-Port 5174 is in use, trying another one...
+[2m8:08:37 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m Re-optimizing dependencies because lockfile has changed
 
-  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m443[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v7.3.1[39m  [2mready in [0m[1m737[22m[2m[0m ms[22m
 
-  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
-  [32m➜[39m  [1mNetwork[22m: [36mhttp://10.42.7.252:[1m5175[22m/[39m
-  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.29.208.1:[1m5175[22m/[39m
-[2m12:05:20 PM[22m [36m[1m[vite][22m[39m [32mvite.config.ts changed, restarting server...[39m
-[2m12:05:20 PM[22m [36m[1m[vite][22m[39m server restarted.
-[2m12:07:50 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
-[2m12:12:45 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/index.css[22m
-[2m12:32:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/layout/Navbar.tsx[22m
-[2m12:32:49 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/layout/Footer.tsx[22m
-[2m12:32:53 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/About.tsx[22m
-[2m12:32:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Contact.tsx[22m
-[2m12:33:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Hero.tsx[22m
-[2m12:33:06 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Testimonials.tsx[22m
-[2m12:33:10 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/WhyUs.tsx[22m
-[2m12:33:14 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/pages/GalleryPage.tsx, /src/index.css[22m
-[2m12:34:46 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Hero.tsx[22m
-[2m12:35:55 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Gallery.tsx[22m
-[2m12:47:44 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/layout/Footer.tsx[22m
-[2m12:47:48 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Contact.tsx[22m
-[2m12:50:20 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/About.tsx[22m
-[2m12:50:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/Hero.tsx[22m
-[2m12:54:18 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css, /src/components/sections/About.tsx[22m
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.100.46:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://172.29.192.1:[1m5173[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m8:09:58 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Testimonials.tsx, /src/index.css[22m
+[2m8:15:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Gallery.tsx, /src/index.css[22m
+[2m8:15:23 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Gallery.tsx, /src/index.css[22m
+[2m8:28:47 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Gallery.tsx, /src/index.css[22m
+[2m9:50:51 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Pricing.tsx, /src/index.css[22m
+[2m9:51:01 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/layout/Footer.tsx, /src/index.css[22m
+[2m9:51:13 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/sections/Contact.tsx, /src/index.css[22m
