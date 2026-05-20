@@ -24,7 +24,7 @@ export default function Home() {
         <About />
         <WhyUs />
         <Programs />
-        <Gallery />
+        <Gallery mode="preview" />
         <Testimonials />
         <FAQ />
       </main>

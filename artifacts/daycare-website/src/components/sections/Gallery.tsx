@@ -8,18 +8,43 @@ interface GalleryItem {
   src: string;
 }
 
-const galleryItems: GalleryItem[] = Array.from({ length: 53 }, (_, index) => {
-  const id = index + 1;
+interface GalleryGroup {
+  title: string;
+  description: string;
+  range: [number, number];
+}
 
-  return {
-    id,
-    title: `Sproutville moment ${id}`,
-    src: `/gallery/sproutville-gallery-${String(id).padStart(2, '0')}.jpeg`,
-  };
-});
+interface GalleryProps {
+  mode?: 'preview' | 'full';
+}
 
-export function Gallery() {
+const fullGalleryGroups: GalleryGroup[] = [
+  {
+    title: "Events",
+    description: "Special events and shared celebrations with our children and families.",
+    range: [1, 12],
+  },
+  {
+    title: "Normal Images",
+    description: "Everyday classroom, learning, and play moments from across the daycare.",
+    range: [13, 53],
+  },
+];
+
+function buildItems(start: number, end: number, prefix: string): GalleryItem[] {
+  return Array.from({ length: end - start + 1 }, (_, index) => {
+    const id = start + index;
+    return {
+      id,
+      title: `${prefix} ${index + 1}`,
+      src: `/gallery/sproutville-gallery-${String(id).padStart(2, '0')}.jpeg`,
+    };
+  });
+}
+
+export function Gallery({ mode = 'full' }: GalleryProps) {
   const [selected, setSelected] = useState<GalleryItem | null>(null);
+  const previewItems = buildItems(1, 8, 'Gallery');
 
   return (
     <section id="gallery" className="py-24 md:py-32 bg-white">
@@ -33,36 +58,81 @@ export function Gallery() {
           </div>
           <FadeIn delay={200}>
             <p className="text-muted-foreground max-w-md">
-              Real moments from our classrooms, celebrations, play sessions, and everyday learning.
+              {mode === 'preview'
+                ? 'A quick look at moments from life at Sproutville Daycare.'
+                : 'Browse our images grouped into events and normal day-to-day moments.'}
             </p>
           </FadeIn>
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-5">
-          {galleryItems.map((item, index) => (
-            <FadeIn key={item.id} delay={(index % 12) * 35} className="mb-4 md:mb-5 break-inside-avoid">
-              <button
-                type="button"
-                onClick={() => setSelected(item)}
-                className="group relative block w-full overflow-hidden rounded-3xl bg-muted shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
-                aria-label={`Open ${item.title}`}
-              >
-                <img
-                  src={item.src}
-                  alt={item.title}
-                  className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading={index < 8 ? 'eager' : 'lazy'}
-                />
+        {mode === 'preview' ? (
+          <div className="columns-1 sm:columns-2 lg:columns-4 gap-4 md:gap-5">
+            {previewItems.map((item, index) => (
+              <FadeIn key={item.id} delay={(index % 8) * 35} className="mb-4 md:mb-5 break-inside-avoid">
+                <button
+                  type="button"
+                  onClick={() => setSelected(item)}
+                  className="group relative block w-full overflow-hidden rounded-3xl bg-muted shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
+                  aria-label={`Open ${item.title}`}
+                >
+                  <img
+                    src={item.src}
+                    alt={item.title}
+                    className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading={index < 6 ? 'eager' : 'lazy'}
+                  />
 
-                <span className="absolute inset-0 flex items-center justify-center bg-primary/0 opacity-0 transition-all duration-300 group-hover:bg-primary/45 group-hover:opacity-100 group-focus-visible:bg-primary/45 group-focus-visible:opacity-100">
-                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-primary shadow-lg">
-                    <ZoomIn size={24} />
+                  <span className="absolute inset-0 flex items-center justify-center bg-primary/0 opacity-0 transition-all duration-300 group-hover:bg-primary/45 group-hover:opacity-100 group-focus-visible:bg-primary/45 group-focus-visible:opacity-100">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-primary shadow-lg">
+                      <ZoomIn size={24} />
+                    </span>
                   </span>
-                </span>
-              </button>
-            </FadeIn>
-          ))}
-        </div>
+                </button>
+              </FadeIn>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-14">
+          {fullGalleryGroups.map((group, groupIndex) => {
+            const items = buildItems(group.range[0], group.range[1], group.title);
+
+            return (
+              <div key={group.title}>
+                <FadeIn delay={groupIndex * 80}>
+                  <h4 className="text-2xl md:text-3xl font-bold text-primary">{group.title}</h4>
+                  <p className="text-muted-foreground mt-2 mb-6">{group.description}</p>
+                </FadeIn>
+
+                <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-5">
+                  {items.map((item, index) => (
+                    <FadeIn key={item.id} delay={(index % 10) * 35} className="mb-4 md:mb-5 break-inside-avoid">
+                      <button
+                        type="button"
+                        onClick={() => setSelected(item)}
+                        className="group relative block w-full overflow-hidden rounded-3xl bg-muted shadow-md transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-accent/40"
+                        aria-label={`Open ${item.title}`}
+                      >
+                        <img
+                          src={item.src}
+                          alt={item.title}
+                          className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          loading={groupIndex === 0 && index < 6 ? 'eager' : 'lazy'}
+                        />
+
+                        <span className="absolute inset-0 flex items-center justify-center bg-primary/0 opacity-0 transition-all duration-300 group-hover:bg-primary/45 group-hover:opacity-100 group-focus-visible:bg-primary/45 group-focus-visible:opacity-100">
+                          <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/95 text-primary shadow-lg">
+                            <ZoomIn size={24} />
+                          </span>
+                        </span>
+                      </button>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+          </div>
+        )}
       </div>
 
       {selected && (
