@@ -9,6 +9,7 @@ interface GalleryItem {
 }
 
 interface GalleryGroup {
+  id: string;
   title: string;
   description: string;
   range: [number, number];
@@ -16,15 +17,18 @@ interface GalleryGroup {
 
 interface GalleryProps {
   mode?: 'preview' | 'full';
+  group?: GalleryGroup['id'];
 }
 
 const fullGalleryGroups: GalleryGroup[] = [
   {
+    id: "events",
     title: "Events",
     description: "Special events and shared celebrations with our children and families.",
     range: [1, 12],
   },
   {
+    id: "normal-images",
     title: "Normal Images",
     description: "Everyday classroom, learning, and play moments from across the daycare.",
     range: [13, 53],
@@ -42,9 +46,13 @@ function buildItems(start: number, end: number, prefix: string): GalleryItem[] {
   });
 }
 
-export function Gallery({ mode = 'full' }: GalleryProps) {
+export function Gallery({ mode = 'full', group }: GalleryProps) {
   const [selected, setSelected] = useState<GalleryItem | null>(null);
   const previewItems = buildItems(1, 8, 'Gallery');
+  const visibleGalleryGroups = group
+    ? fullGalleryGroups.filter((galleryGroup) => galleryGroup.id === group)
+    : fullGalleryGroups;
+  const visibleGalleryGroup = visibleGalleryGroups[0];
 
   return (
     <section id="gallery" className="py-24 md:py-32 bg-white">
@@ -60,7 +68,9 @@ export function Gallery({ mode = 'full' }: GalleryProps) {
             <p className="text-muted-foreground max-w-md">
               {mode === 'preview'
                 ? 'A quick look at moments from life at Sproutville Daycare.'
-                : 'Browse our images grouped into events and normal day-to-day moments.'}
+                : visibleGalleryGroups.length === 1
+                  ? visibleGalleryGroup.description
+                  : 'Browse our images grouped into events and normal day-to-day moments.'}
             </p>
           </FadeIn>
         </div>
@@ -93,14 +103,14 @@ export function Gallery({ mode = 'full' }: GalleryProps) {
           </div>
         ) : (
           <div className="space-y-14">
-          {fullGalleryGroups.map((group, groupIndex) => {
-            const items = buildItems(group.range[0], group.range[1], group.title);
+          {visibleGalleryGroups.map((galleryGroup, groupIndex) => {
+            const items = buildItems(galleryGroup.range[0], galleryGroup.range[1], galleryGroup.title);
 
             return (
-              <div key={group.title}>
+              <div id={galleryGroup.id} key={galleryGroup.title} className="scroll-mt-28">
                 <FadeIn delay={groupIndex * 80}>
-                  <h4 className="text-2xl md:text-3xl font-bold text-primary">{group.title}</h4>
-                  <p className="text-muted-foreground mt-2 mb-6">{group.description}</p>
+                  <h4 className="text-2xl md:text-3xl font-bold text-primary">{galleryGroup.title}</h4>
+                  <p className="text-muted-foreground mt-2 mb-6">{galleryGroup.description}</p>
                 </FadeIn>
 
                 <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 md:gap-5">

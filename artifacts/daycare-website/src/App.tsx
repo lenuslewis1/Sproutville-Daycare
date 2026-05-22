@@ -24,7 +24,15 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/programs" component={ProgramsPage} />
-      <Route path="/gallery" component={GalleryPage} />
+      <Route path="/gallery/events">
+        <GalleryPage group="events" />
+      </Route>
+      <Route path="/gallery/normal-images">
+        <GalleryPage group="normal-images" />
+      </Route>
+      <Route path="/gallery">
+        <GalleryPage />
+      </Route>
       <Route path="/testimonials" component={TestimonialsPage} />
       <Route path="/pricing" component={PricingPage} />
       <Route path="/contact" component={ContactPage} />
