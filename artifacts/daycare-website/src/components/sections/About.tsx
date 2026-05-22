@@ -17,7 +17,7 @@ export function About() {
     },
     {
       icon: <Smile size={32} className="text-primary" />,
-      value: "30+",
+      value: "20+",
       label: "Happy Families",
       description: "A close-knit community built on love, trust, and purposeful play."
     }

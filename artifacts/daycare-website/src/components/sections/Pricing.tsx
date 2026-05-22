@@ -13,7 +13,8 @@ export function Pricing() {
         "Infants - Not Applicable (N/A)",
         "Toddlers (1-3 years): Ghc 2,500",
         "Preschool (3-5 years): Ghc 2,400",
-        "Enrollment fee: Ghc 600.00"
+        "Enrollment fee: Ghc 600.00",
+        "Late pickup after 4:00 PM: Ghc 20 per hour"
       ],
       highlighted: false
     },
@@ -26,7 +27,8 @@ export function Pricing() {
         "Infants (3-12 months): Ghc 1,300",
         "Toddlers (1-3 years): Ghc 1,100",
         "Preschool (3-5 years): Ghc 1,000",
-        "Secure and nurturing care included"
+        "Secure and nurturing care included",
+        "Late pickup after 4:00 PM: Ghc 20 per hour"
       ],
       highlighted: true
     },
@@ -38,7 +40,8 @@ export function Pricing() {
       features: [
         "Infants: 1 day 130, 2 days 225, 3 days 310, 4 days 370, weekly 450",
         "Toddlers/Preschool: 1 day 110, 2 days 190, 3 days 260, 4 days 320, weekly 400",
-        "After school program: Ghc 200 per week",
+        "Extra care 4:00 PM to 5:00 PM: Ghc 400 monthly",
+        "Extra care 4:00 PM to 6:00 PM: Ghc 600 monthly",
         "Late pickup after 4:00 PM: Ghc 20 per hour"
       ],
       highlighted: false

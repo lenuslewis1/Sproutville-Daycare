@@ -6,7 +6,6 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
@@ -51,15 +50,13 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
+          {/* Stage and Age Categories */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">Programs</h3>
+            <h3 className="text-lg font-semibold mb-6 text-white">Stage and Age Categories</h3>
             <ul className="space-y-3">
-              <li className="text-primary-foreground/70">Blossom Room (3 months – 2 yrs)</li>
-              <li className="text-primary-foreground/70">Sunshine Room (2 – 3 yrs)</li>
-              <li className="text-primary-foreground/70">Rainbow Room (3 – 5 yrs)</li>
-              <li className="text-primary-foreground/70">Breakfast Club (6:30 – 7:30 AM)</li>
-              <li className="text-primary-foreground/70">After School Club (6:00 – 7:00 PM)</li>
+              <li className="text-primary-foreground/70">Infants: 3 months to 1 year</li>
+              <li className="text-primary-foreground/70">Toddlers: 1 year to 3 years</li>
+              <li className="text-primary-foreground/70">Pre-school: 3 years to 5 years</li>
             </ul>
           </div>
 
@@ -77,7 +74,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Mail size={20} className="shrink-0 text-accent" />
-                <span>sproutvilledaycare@gmail.com</span>
+                <a href="mailto:sproutvilledaycare@gmail.com" className="hover:text-white transition-colors">sproutvilledaycare@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-primary-foreground/70">
                 <Globe size={20} className="shrink-0 text-accent" />
@@ -85,7 +82,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
