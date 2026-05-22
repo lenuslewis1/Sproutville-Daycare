@@ -6,7 +6,7 @@ export function FAQ() {
   const faqs = [
     {
       question: "What are your operating hours?",
-      answer: "We are open Monday through Friday from 7:30 AM to 6:30 PM. After-school care runs daily from 4:00 PM to 6:00 PM."
+      answer: "We are open Monday through Friday from 7:00 AM to 5:00 PM. ."
     },
     {
       question: "What is your sick child policy?",
