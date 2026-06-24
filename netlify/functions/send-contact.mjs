@@ -5,6 +5,7 @@ const CORS_HEADERS = {
 };
 
 const FORM_RECIPIENT_EMAIL = "sproutvilledaycare@gmail.com";
+const DEFAULT_FROM_EMAIL = "Sproutville Daycare <onboarding@resend.dev>";
 
 export default async (request) => {
   if (request.method === "OPTIONS") {
@@ -19,7 +20,10 @@ export default async (request) => {
   }
 
   const resendApiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "Sproutville Daycare <onboarding@resend.dev>";
+  const configuredFromEmail = process.env.RESEND_FROM_EMAIL || DEFAULT_FROM_EMAIL;
+  const fromEmail = configuredFromEmail.includes("@gmail.com")
+    ? DEFAULT_FROM_EMAIL
+    : configuredFromEmail;
 
   if (!resendApiKey) {
     return new Response(JSON.stringify({ error: "Missing RESEND_API_KEY" }), {

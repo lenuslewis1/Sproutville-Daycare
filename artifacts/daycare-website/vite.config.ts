@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import sendContact from "../../netlify/functions/send-contact.mjs";
 
 const rawPort = process.env.PORT ?? "5173";
 
@@ -20,6 +21,36 @@ export default defineConfig({
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
+    {
+      name: "local-contact-api",
+      configureServer(server) {
+        const handleContactRequest = async (req, res) => {
+          if (req.method === "OPTIONS") {
+            res.statusCode = 204;
+            res.end();
+            return;
+          }
+
+          const chunks = [];
+          for await (const chunk of req) {
+            chunks.push(chunk);
+          }
+
+          const request = new Request("http://localhost/api/contact", {
+            method: req.method,
+            headers: req.headers,
+            body: Buffer.concat(chunks),
+          });
+          const response = await sendContact(request);
+          res.statusCode = response.status;
+          response.headers.forEach((value, key) => res.setHeader(key, value));
+          res.end(await response.text());
+        };
+
+        server.middlewares.use("/api/contact", handleContactRequest);
+        server.middlewares.use("/.netlify/functions/send-contact", handleContactRequest);
+      },
+    },
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [

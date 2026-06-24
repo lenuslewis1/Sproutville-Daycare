@@ -20,6 +20,8 @@ const INITIAL_FORM: ContactFormState = {
   message: '',
 };
 
+const CONTACT_ENDPOINT = '/.netlify/functions/send-contact';
+
 export function Contact() {
   const [form, setForm] = useState<ContactFormState>(INITIAL_FORM);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -35,20 +37,24 @@ export function Contact() {
     setSubmitError('');
     setIsSubmitting(true);
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       });
 
       if (!response.ok) {
-        throw new Error('Unable to send request right now.');
+        const payload = await response.json().catch(() => null);
+        const detail = payload?.error === 'Missing RESEND_API_KEY'
+          ? 'Email sending is not configured yet. Please call or email us directly.'
+          : 'Unable to send request right now.';
+        throw new Error(detail);
       }
 
       setIsSubmitted(true);
       setForm(INITIAL_FORM);
     } catch (error) {
-      setSubmitError('We could not send your request. Please try again in a moment.');
+      setSubmitError(error instanceof Error ? error.message : 'We could not send your request. Please try again in a moment.');
     } finally {
       setIsSubmitting(false);
     }
