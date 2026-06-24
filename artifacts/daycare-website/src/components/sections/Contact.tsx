@@ -20,14 +20,7 @@ const INITIAL_FORM: ContactFormState = {
   message: '',
 };
 
-const FORM_NAME = 'tour-request';
-
-function encodeFormData(form: ContactFormState) {
-  return new URLSearchParams({
-    'form-name': FORM_NAME,
-    ...form,
-  }).toString();
-}
+const CONTACT_ENDPOINT = '/.netlify/functions/send-contact';
 
 export function Contact() {
   const [form, setForm] = useState<ContactFormState>(INITIAL_FORM);
@@ -44,16 +37,18 @@ export function Contact() {
     setSubmitError('');
     setIsSubmitting(true);
     try {
-      const response = await fetch('/', {
+      const response = await fetch(CONTACT_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encodeFormData(form),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       });
 
-      const isExpectedLocalDevPost = import.meta.env.DEV && response.status === 404;
-
-      if (!response.ok && !isExpectedLocalDevPost) {
-        throw new Error('We could not send your request right now. Please email sproutvilledaycare@gmail.com or call 0557577475.');
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        const message = payload?.error === 'Postmark is not configured'
+          ? 'Email sending is not configured yet. Please email sproutvilledaycare@gmail.com or call 0557577475.'
+          : 'We could not send your request right now. Please email sproutvilledaycare@gmail.com or call 0557577475.';
+        throw new Error(message);
       }
 
       setIsSubmitted(true);
@@ -160,7 +155,6 @@ export function Contact() {
                   </div>
                 ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <input type="hidden" name="form-name" value={FORM_NAME} />
                   <h3 className="text-2xl font-bold text-primary mb-8 border-b border-border pb-4">Request a Tour</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
