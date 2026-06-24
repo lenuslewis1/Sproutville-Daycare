@@ -4,6 +4,8 @@ const CORS_HEADERS = {
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
 
+const FORM_RECIPIENT_EMAIL = "sproutvilledaycare@gmail.com";
+
 export default async (request) => {
   if (request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
@@ -18,7 +20,6 @@ export default async (request) => {
 
   const resendApiKey = process.env.RESEND_API_KEY;
   const fromEmail = process.env.RESEND_FROM_EMAIL || "Sproutville Daycare <onboarding@resend.dev>";
-  const toEmail = "sproutvilledaycare@gmail.com";
 
   if (!resendApiKey) {
     return new Response(JSON.stringify({ error: "Missing RESEND_API_KEY" }), {
@@ -73,7 +74,7 @@ export default async (request) => {
       },
       body: JSON.stringify({
         from: fromEmail,
-        to: [toEmail],
+        to: [FORM_RECIPIENT_EMAIL],
         reply_to: email,
         subject,
         text,

@@ -12,7 +12,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Mrs Phyllis Deoyela",
+    name: "Mr. And Mrs. Deoyela",
     role: "Parent at Sproutville Daycare",
     image: "/testimonials/mrs-phyllis-deoyela.jpeg",
     quote: "Dear friends, on this special day, as we celebrate the one year anniversary of this great school, we would like to express our profound gratitude to the entire teaching and non-teaching staff for the wonderful job they are doing. We can attest to the positive childhood development our child has gained after being enrolled in this school. Together, we are proud as parents to be part of this journey so far."
