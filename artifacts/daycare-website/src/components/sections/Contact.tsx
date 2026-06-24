@@ -47,7 +47,7 @@ export function Contact() {
         const payload = await response.json().catch(() => null);
         const detail = payload?.error === 'Missing RESEND_API_KEY'
           ? 'Email sending is not configured yet. Please call or email us directly.'
-          : 'Unable to send request right now.';
+          : 'We could not send your request right now. Please email sproutvilledaycare@gmail.com or call 0557577475.';
         throw new Error(detail);
       }
 
