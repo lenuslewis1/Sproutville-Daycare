@@ -18,7 +18,7 @@ export default async (request) => {
   }
 
   const postmarkServerToken = process.env.POSTMARK_SERVER_TOKEN;
-  const fromEmail = process.env.POSTMARK_FROM_EMAIL;
+  const fromEmail = process.env.POSTMARK_FROM_EMAIL || process.env.RESEND_FROM_EMAIL;
   const messageStream = process.env.POSTMARK_MESSAGE_STREAM || DEFAULT_MESSAGE_STREAM;
 
   if (!postmarkServerToken || !fromEmail) {
